@@ -1,15 +1,15 @@
 
-jest.mock('@mapbox/mapbox-gl-draw/src/lib/create_supplementary_points');
-jest.mock('@mapbox/mapbox-gl-draw/src/lib/move_features');
-jest.mock('@mapbox/mapbox-gl-draw/src/lib/constrain_feature_movement');
+jest.mock("../../lib/utils/create_supplementary_points");
+jest.mock("../../lib/utils/move_features");
+jest.mock("../../lib/utils/constrain_feature_movement");
 jest.mock('@turf/distance', () => ({ default: jest.fn() }));
 jest.mock('@turf/helpers');
 jest.mock('@turf/circle', () => ({ default: jest.fn() }));
 jest.mock('../../lib/utils/create_supplementary_points_circle');
 
-const createSupplementaryPoints = require('@mapbox/mapbox-gl-draw/src/lib/create_supplementary_points');
-const moveFeatures = require('@mapbox/mapbox-gl-draw/src/lib/move_features');
-const Constants = require('@mapbox/mapbox-gl-draw/src/constants');
+const createSupplementaryPoints = require("../../lib/utils/create_supplementary_points");
+const moveFeatures = require("../../lib/utils/move_features");
+const Constants = require("../../lib/utils/constants");
 const distance = require('@turf/distance').default;
 const circle = require('@turf/circle').default;
 const createSupplementaryPointsForCircle = require('../../lib/utils/create_supplementary_points_circle');
