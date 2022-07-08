@@ -1,6 +1,6 @@
 {
   "name": "maplibre-gl-draw-circle",
-  "version": "0.0.32",
+  "version": "0.0.2",
   "description": "A module to draw a circle using mapbox-gl-draw",
   "main": "index",
   "scripts": {
