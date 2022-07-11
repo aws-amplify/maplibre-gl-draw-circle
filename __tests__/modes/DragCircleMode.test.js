@@ -26,7 +26,7 @@ const mockFeature = {
   }
 };
 const doubleClickZoom = require('@mapbox/mapbox-gl-draw/src/lib/double_click_zoom');
-const Constants = require('@mapbox/mapbox-gl-draw/src/constants');
+const Constants = require("../../lib/utils/constants");
 const circle = require('@turf/circle');
 const dragPan = require('../../lib/utils/drag_pan');
 const distance = require('@turf/distance');

@@ -1,10 +1,10 @@
-jest.mock('@mapbox/mapbox-gl-draw/src/lib/create_supplementary_points');
-jest.mock('@mapbox/mapbox-gl-draw/src/lib/move_features');
+jest.mock("../../lib/utils/create_supplementary_points");
+jest.mock("../../lib/utils/move_features");
 jest.mock('../../lib/utils/create_supplementary_points_circle');
 
-const createSupplementaryPoints = require('@mapbox/mapbox-gl-draw/src/lib/create_supplementary_points');
-const moveFeatures = require('@mapbox/mapbox-gl-draw/src/lib/move_features');
-const Constants = require('@mapbox/mapbox-gl-draw/src/constants');
+const createSupplementaryPoints = require("../../lib/utils/create_supplementary_points");
+const moveFeatures = require("../../lib/utils/move_features");
+const Constants = require("../../lib/utils/constants");
 const createSupplementaryPointsForCircle = require('../../lib/utils/create_supplementary_points_circle');
 
 let SimpleSelectMode = require('../../lib/modes/SimpleSelectModeOverride');
