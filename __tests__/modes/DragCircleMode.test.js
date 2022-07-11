@@ -1,6 +1,6 @@
-jest.mock('@mapbox/mapbox-gl-draw/src/lib/double_click_zoom', () => ({
+jest.mock("../../lib/utils/double_click_zoom", () => ({
   enable: jest.fn(),
-  disable: jest.fn()
+  disable: jest.fn(),
 }));
 
 jest.mock('@turf/circle', () => ({
@@ -25,7 +25,7 @@ const mockFeature = {
     "coordinates": []
   }
 };
-const doubleClickZoom = require('@mapbox/mapbox-gl-draw/src/lib/double_click_zoom');
+const doubleClickZoom = require("../../lib/utils/double_click_zoom");
 const Constants = require("../../lib/utils/constants");
 const circle = require('@turf/circle');
 const dragPan = require('../../lib/utils/drag_pan');
