@@ -170,7 +170,7 @@ describe('DragCircleMode', function () {
     DragCircleMode.onMouseUp(state, {});
     expect(dragPan.disable).toHaveBeenCalled();
     expect(DragCircleMode.changeMode).toHaveBeenCalledWith(Constants.modes.SIMPLE_SELECT,
-      {featureIds: ['test-id']})
+      { featureIds: ['test-id'] })
   });
 
   it('should finish drawing if onTouchEnd is fired', function () {
@@ -182,13 +182,16 @@ describe('DragCircleMode', function () {
     DragCircleMode.onTouchEnd(state, {});
     expect(dragPan.disable).toHaveBeenCalled();
     expect(DragCircleMode.changeMode).toHaveBeenCalledWith(Constants.modes.SIMPLE_SELECT,
-      {featureIds: ['test-id']})
+      { featureIds: ['test-id'] })
   });
 
   it('should should set active state and display features', function () {
     const state = {
       polygon: {
-        id: 'test-id'
+        id: 'test-id',
+        properties: {
+          center: [2, 1]
+        }
       }
     };
 
@@ -221,7 +224,7 @@ describe('DragCircleMode', function () {
         incomingCoords: jest.fn()
       }
     };
-    DragCircleMode.onDrag(state, { lngLat: { lat: 1, lng: 2}});
+    DragCircleMode.onDrag(state, { lngLat: { lat: 1, lng: 2 } });
     expect(state.polygon.incomingCoords).toHaveBeenCalledWith([12, 2])
     expect(state.polygon.properties.radiusInKm).toEqual(2);
   });
@@ -242,7 +245,7 @@ describe('DragCircleMode', function () {
         incomingCoords: jest.fn()
       }
     };
-    DragCircleMode.onMouseMove(state, { lngLat: { lat: 1, lng: 2}});
+    DragCircleMode.onMouseMove(state, { lngLat: { lat: 1, lng: 2 } });
     expect(state.polygon.incomingCoords).toHaveBeenCalledWith([12, 2])
     expect(state.polygon.properties.radiusInKm).toEqual(2);
   });
