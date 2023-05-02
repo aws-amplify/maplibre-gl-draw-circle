@@ -28,6 +28,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thaddmt/maplibre-gl-draw-circle"
+    "url": "https://github.com/aws-amplify/maplibre-gl-draw-circle"
   }
 }
